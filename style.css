@@ -1,0 +1,244 @@
+body {
+  background-color: #f8f9fa;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 40px 0;
+}
+
+.icon-cart {
+  width: 40px;
+}
+
+.hero {
+  background: linear-gradient(to right, #e3fedb, #fdffef);
+  padding: 10px 0 1px;
+}
+
+.container01 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.texto {
+  display: flex;
+  justify-content: left;
+  padding-left: -0px;
+}
+
+.titulo-vendido {
+  margin: 1rem 0 1rem;
+  justify-content: left;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #28a745;
+}
+
+#cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 2rem auto;
+  max-width: 2500px;
+}
+
+/*Tarjetas del mismo tamaño que la del Brócoli o de la frutas creoxd*/
+.card {
+  width: 290px;
+  height: 430px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+.card figure {
+  overflow: hidden;
+  margin: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  height: calc(100% - 300px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-body button {
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.card-body button:hover {
+  background-color: #1f8c38;
+}
+
+.contacto {
+  background-color: #f9fff7;
+  padding: 5rem 2rem; /* ↑ Más padding arriba/abajo y en los lados */
+  border-top: 3px solid #d4f5d0; /* ↑ Un poco más grueso */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contacto h2 {
+  font-size: 2.5rem; /* ↑ Más grande */
+  margin-bottom: 1.5rem; /* ↑ Más espacio debajo del título */
+}
+
+.contacto p.text-muted {
+  font-size: 1.2rem; /* ↑ Texto descriptivo más legible */
+  margin-bottom: 2.5rem; /* ↑ Más espacio antes del formulario */
+}
+
+/* Agrandar el formulario */
+.contacto form {
+  width: 100%;
+  max-width: 600px; /* ↑ Un poco más ancho que antes */
+}
+
+.contacto form input,
+.contacto form textarea {
+  width: 100%; /* Asegura que ocupen todo el ancho del contenedor */
+  border: 2px solid #28a745;
+  border-radius: 12px; /* ↑ Ligeramente más redondeado */
+  padding: 18px; /* ↑ Más relleno → más alto */
+  font-size: 1.15rem; /* ↑ Texto más grande dentro de los campos */
+  margin-bottom: 1.25rem; /* ↑ Espacio entre campos */
+  box-sizing: border-box; /* Evita que se desborden */
+}
+
+.contacto form textarea {
+  min-height: 160px; /* ↑ Más alto por defecto */
+  resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+.contacto form input:focus,
+.contacto form textarea:focus {
+  outline: none;
+  border-color: #45c76d;
+  box-shadow: 0 0 8px rgba(72, 187, 120, 0.6); /* ↑ Sombra más visible */
+}
+
+.contacto button {
+  width: 100%;
+  padding: 16px; /* ↑ Más alto */
+  font-size: 1.25rem; /* ↑ Texto más grande */
+  font-weight: 600;
+  border: none;
+  border-radius: 12px; /* ↑ Coincide con los inputs */
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contacto button:hover {
+  background-color: #218838;
+  transform: translateY(-2px); /* ↑ Pequeño efecto de "elevarse" */
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+/* Mensaje de éxito (si lo usas) */
+#mensaje-enviado {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+  background-color: #e6f7e6;
+  border-radius: 10px;
+}
+#buscador {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+@media (max-width: 576px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .titulo-vendido {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  #cards-container {
+    padding: 0 15px;
+  }
+
+  .contacto {
+    padding: 2rem 1rem;
+  }
+
+  .contacto h2 {
+    font-size: 2rem;
+  }
+
+  .contacto p.text-muted {
+    font-size: 1rem;
+  }
+
+  .contacto button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .icon-cart {
+    max-width: 100%;
+    height: auto;
+  }
+}

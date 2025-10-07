@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Landing Page - ECOMARKET</title>
+
+  <!-- Enlace al CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-success" href="#">TIENDA</a>
+
+         <button type="button" class="btn btn-outline-success position-relative" data-bs-toggle="modal" data-bs-target="#carritoModal">
+  🛒
+  <span id="carrito-contador" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+</button>
+
+<!-- Modal del carrito -->
+<div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="carritoModalLabel">Tu carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="carrito-lista" class="list-group"></ul>
+      </div>
+      <div class="modal-footer">
+        <button id="vaciar-carrito" class="btn btn-danger">Vaciar carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold text-success">Bienvenido a ECOMARKET</h1>
+      <h4 class="lead text-muted fw-bold">Ofrecemos productos de alta calidad</h4>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mt-3">
+  <div class="container">
+    
+    <!-- Botón de colapso para móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <input type="text" id="buscador" placeholder="Buscar producto..." />
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+        <li><a class="nav-link" href="inicio.html">Inicio</a></li>
+        <li><a class="nav-link" href="todos-productos.html" target="_parent">Todos los productos</a></li>
+        <li><a class="nav-link" href="verduras.html">Verduras</a></li>
+        <li><a class="nav-link" href="frutas.html">Frutas</a></li>
+        <li><a class="nav-link" href="granos-y-legumbres.html">Granos y Legumbres</a></li>
+        <li><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://facebook.com/ecomarket.oficial" target="_blank">
+            <img src="https://store-images.s-microsoft.com/image/apps.37935.9007199266245907.b029bd80-381a-4869-854f-bac6f359c5c9.91f8693c-c75b-4050-a796-63e1314d18c9?h=210" alt="Facebook" width="20" height="20">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  </section>
+
+  <section class="container01 my-5">
+    <div class="texto">
+      <h2 class="titulo-vendido">Todos los productos</h2>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR PARA LAS TARJETAS DE PRODUCTOS -->
+  <div id="cards-container" class="d-flex flex-wrap justify-content-center gap-3"></div>
+
+  <!-- seccion del contacto con el clinte -->
+  
+      
+
+  <div class="modal fade" id="detalleProductoModal" tabindex="-1" aria-labelledby="detalleProductoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="detalleProductoModalLabel">Nombre del Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="detalle-imagen" src="" alt="Producto" class="img-fluid mb-3">
+          <div id="detalle-descripcion" class="text-start"></div>
+          <div class="text-center mt-3">
+            <button class="btn btn-success">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS DE BOOTSTRAP Y ARCHIVO JS PRINCIPAL -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script-todos-productos.js"></script>
+</body>
+</html>
